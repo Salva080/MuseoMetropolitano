@@ -1,0 +1,197 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-image: url('museointerior.jpg'); /* Cambia el nombre por el de tu imagen */
+    background-size: cover; /* Asegura que la imagen cubra todo el fondo */
+    background-position: center; /* Centra la imagen */
+    color: #ffffff;
+    line-height: 1.6;
+    min-height: 100vh; /* Asegura que el body ocupe al menos el 100% de la altura de la ventana */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+/* Estilos para el formulario */
+form {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+form label {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-right: 10px;
+}
+
+form input[type="text"], form select {
+    padding: 10px;
+    font-size: 1rem;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    width: 200px;
+    outline: none;
+    transition: border 0.3s ease;
+}
+
+form input[type="text"]:focus, form select:focus {
+    border: 2px solid #2a9df4;
+}
+
+form button {
+    background-color: #2a9df4;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #1a7ec8;
+}
+
+/* Estilos para el encabezado del formulario */
+.header {
+    background-color: rgba(0, 0, 0, 0.6); /* Fondo semi-transparente para el encabezado */
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+/* Estilos para la grilla de arte */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+/* Ajustes para las cards */
+.card {
+    position: relative;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    padding: 15px;
+    overflow: hidden; /* Asegura que los contenidos no se desborden */
+    width: auto; /* Ancho flexible */
+    min-width: 250px; /* Ancho mínimo */
+    max-width: 300px; /* Ajusta según sea necesario */
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Ajustes para las imágenes */
+.card img {
+    width: 100%;           /* La imagen cubre el ancho de la tarjeta */
+    height: auto;         /* Mantiene la proporción de la imagen */
+    max-height: 150px;    /* Altura máxima de la imagen (ajustada) */
+    object-fit: cover;    /* Mantiene la relación de aspecto y recorta */
+    border-radius: 10px;  /* Bordes redondeados en la imagen */
+    margin-bottom: 10px;  /* Espacio entre la imagen y el contenido */
+}
+
+/* Mantener el título y la metadata por debajo de la imagen */
+.card-title {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin: 10px 0;
+    color: #333;
+}
+
+.card-meta {
+    font-size: 0.9rem;
+    color: #555;
+}
+
+/* Botón en las cards para más imágenes */
+.card .button {
+    display: inline-block;
+    background-color: #2a9df4;
+    color: #fff;
+    padding: 8px 12px;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-top: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.card .button:hover {
+    background-color: #1a7ec8;
+}
+
+/* Estilos para la paginación */
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.pagination button {
+    background-color: #2a9df4;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 15px;
+    margin: 0 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.pagination button:hover {
+    background-color: #1a7ec8;
+}
+
+.pagination button:disabled {
+    background-color: #ccc;
+    cursor: default;
+}
+
+.pagination span {
+    font-size: 1.1rem;
+    color: #555;
+}
+
+.date-bar {
+    background-color: rgba(200, 200, 200, 0.192); /* Gris leve */
+    color: rgb(0, 0, 0); /* Texto en blanco */
+    padding: px; /* Espaciado interno */
+    text-align: center; /* Centrar el texto */
+    border-radius: 0 0 10px 5px; /* Bordes redondeados en la parte inferior */
+    display: none; /* Oculta por defecto */
+    margin-bottom: 20px;
+}
+
+.card:hover .date-bar {
+    display: block;     /* Muestra la barra al pasar el mouse sobre la tarjeta */
+}

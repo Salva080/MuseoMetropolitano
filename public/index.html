@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Museo De Artes</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <h1>Museo De Artes</h1>
+        <div class="search-container">
+            <form id="filterForm">
+                <label for="department">DEPARTAMENTO</label>
+                <select id="department" name="department">
+                   
+                </select>
+
+                <label for="keyword">CLAVE</label>
+                <input type="text" id="keyword" name="keyword" placeholder="Ingrese una palabra clave">
+
+                <label for="location">LOCALIDAD</label>
+                <select id="location" name="location">
+                    
+                </select>
+
+                <button type="submit" class="search-button">Buscar</button>
+            </form>
+        </div>
+    </header>
+    <div id="error-message" style="color: red; display: none;"></div>
+    <div class="container">
+        <div id="artGrid" class="grid">
+           
+        </div>
+
+        <div id="pagination" class="pagination">
+            
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

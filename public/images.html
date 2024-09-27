@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imagenes Adicionales</title>
+    <link rel="stylesheet" href="images.css"> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>IMAGENES ADICIONALES</h1>
+        <div id="additionalImagesGrid" class="grid"></div>
+
+        
+        <button id="backButton" onclick="goBack()">Volver a la página principal</button>
+    </div>
+
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const objectID = urlParams.get('objectID');
+
+        async function loadAdditionalImages() {
+            try {
+                const response = await fetch(`https://collectionapi.metmuseum.org/public/collection/v1/objects/${objectID}`);
+                const data = await response.json();
+                const grid = document.getElementById('additionalImagesGrid');
+                
+                data.additionalImages.forEach(image => {
+                    const cardElement = document.createElement('div');
+                    cardElement.className = 'card'; 
+
+                    const imgElement = document.createElement('img');
+                    imgElement.src = image;
+
+                    cardElement.appendChild(imgElement);
+                    grid.appendChild(cardElement);
+                });
+            } catch (error) {
+                console.error('Error loading additional images:', error);
+            }
+        }
+
+        function goBack() {
+            window.location.href = 'index.html'; 
+        }
+
+        loadAdditionalImages();
+    </script>
+</body>
+</html>

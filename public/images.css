@@ -1,0 +1,81 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url('museointerior.jpg'); 
+}
+
+
+.container {
+    width: 100%;
+    text-align: center; 
+    padding-top: 30px; 
+}
+
+
+h1 {
+    margin: 0;
+    padding: 10px; 
+    font-family: 'Oswald', sans-serif; 
+}
+
+
+
+.grid {
+    display: flex; 
+    flex-wrap: wrap; 
+    justify-content: center; 
+    align-items: center; 
+    width: 100%;
+    margin-top: 30px; 
+}
+
+/* Estilo de las imágenes */
+.grid img {
+    max-width: 100%; 
+    height: auto; /* Mantener la proporción */
+    margin: 10px; /* Espaciado entre imágenes */
+    border: 1px solid #ccc; 
+    border-radius: 10px; 
+    transition: transform 0.2s; 
+}
+
+
+.grid img:hover {
+    transform: scale(1.05); 
+}
+
+/* Estilo de las cards */
+.card {
+    margin: 30px; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    width: 700px; 
+    height: 800px; 
+    overflow: hidden; 
+    border-radius: 10px; 
+    background-color: rgba(255, 255, 255, 0.178); 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+}
+
+
+#backButton {
+    margin: 20px 0; 
+    padding: 10px 20px; 
+    font-size: 16px; 
+    color: #ffffff; 
+    background-color: #007bff; 
+    border: none; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    transition: background-color 0.3s; 
+}
+
+
+#backButton:hover {
+    background-color: #0056b3; 
+}
