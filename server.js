@@ -48,7 +48,7 @@ app.get('/search', async (req, res) => {
             return res.status(404).send('No se encontraron objetos.');
         }
 
-        const objects = response.data.objectIDs; // Suponiendo que estamos trabajando con los IDs de los objetos
+        const objects = response.data.objectIDs; 
         const translatedObjectsPromises = objects.map(async (id) => {
             const objResponse = await axios.get(`https://collectionapi.metmuseum.org/public/collection/v1/objects/${id}`);
             const obj = objResponse.data;
@@ -86,7 +86,7 @@ app.get('/api/objects/:objectID', async (req, res) => {
     }
 });
 
-// Inicia el servidor
+
 app.listen(port, () => {
     console.log(`Servidor escuchando en http://localhost:${port}`);
 });
