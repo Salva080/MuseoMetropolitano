@@ -33,11 +33,11 @@ h1 {
     margin-top: 30px; 
 }
 
-/* Estilo de las imágenes */
+
 .grid img {
     max-width: 100%; 
-    height: auto; /* Mantener la proporción */
-    margin: 10px; /* Espaciado entre imágenes */
+    height: auto; 
+    margin: 10px; 
     border: 1px solid #ccc; 
     border-radius: 10px; 
     transition: transform 0.2s; 
@@ -48,7 +48,7 @@ h1 {
     transform: scale(1.05); 
 }
 
-/* Estilo de las cards */
+
 .card {
     margin: 30px; 
     display: flex; 
