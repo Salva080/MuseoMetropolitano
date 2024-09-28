@@ -189,14 +189,14 @@ document.addEventListener('DOMContentLoaded', () => {
                     `;
                     
                     // Añadir la barra de fecha al card
-                    card.appendChild(dateBar); // Añade la barra de fecha a la tarjeta
+                    card.appendChild(dateBar); 
     
                     // Mostrar la barra de fecha al pasar el mouse
                     card.addEventListener('mouseenter', () => {
-                        dateBar.style.display = 'block'; // Mostrar la barra
+                        dateBar.style.display = 'block'; 
                     });
                     card.addEventListener('mouseleave', () => {
-                        dateBar.style.display = 'none'; // Ocultar la barra
+                        dateBar.style.display = 'none'; 
                     });
     
                     artGrid.appendChild(card);
